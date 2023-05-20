@@ -25,6 +25,15 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
 		<link rel="manifest" href="assets/favicons/site.webmanifest">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+			window.onload = function() {
+			  var currentUrl = window.location.href;
+			  if (currentUrl.endsWith('.html')) {
+				var newUrl = currentUrl.slice(0, -5);
+				window.history.replaceState({}, '', newUrl);
+			  }
+			};
+		</script>
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
@@ -44,7 +53,7 @@
 							
 								<ul>
 									<li class="current"><a href="https://www.myitfiles.com">Starting at just ₹499</a></li>
-									<li><a href="/support">Support</a></li>
+									<li><a href="support.html">Support</a></li>
 									<li><a href="knowledge.html">Knowledge Center</a></li>
 								</ul>
 							</nav>
